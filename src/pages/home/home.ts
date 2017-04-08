@@ -9,7 +9,12 @@ import { MoreTabs } from '../more-tabs/more-tabs';
 export class HomePage {
 
   constructor(public navCtrl: NavController, private _app: App) {
+    // The constructor is being re-run every time the user switched back and forth between TabsPage and MoreTabs
+    console.log("Running constructor for HomePage");
+  }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
   }
 
   goToOtherTabs(): void {
